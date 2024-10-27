@@ -1,4 +1,4 @@
-/*
+
 #include<stdio.h>
 #include<stdlib.h>
 struct stack{
@@ -98,7 +98,7 @@ int main()
 	}while(j!=0);
 	return 0;
 }
-*/
+
 
 //for parentheses
 
