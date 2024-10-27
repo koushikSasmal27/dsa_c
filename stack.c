@@ -328,6 +328,13 @@ int main()
 }
 
 */
+
+
+
+
+
+
+
 /*
 #include<stdio.h>
 #include<stdlib.h>
@@ -355,9 +362,6 @@ int is_empty(struct stack *p)
 	}
 	return 0;
 }
-
-
-
 
 char pop(struct stack *p)
 {
@@ -442,6 +446,8 @@ int  paren(char *a)
 		return 0;
 	}
 	
+	free(s);
+	free(s->a);
 }
 int main()
 {
@@ -464,6 +470,10 @@ int main()
 	
 }
 */
+
+
+
+
 
 
 /*
@@ -493,9 +503,6 @@ int is_empty(struct stack *p)
 	}
 	return 0;
 }
-
-
-
 
 char pop(struct stack *s)
 {
