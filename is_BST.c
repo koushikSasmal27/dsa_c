@@ -15,28 +15,57 @@ void inorder(struct node*root)
 	}
 	
 }
+//int isBST(struct node*root)
+//{
+//	static struct node*prev=NULL;
+//	if(root!=NULL)
+//	{
+//		if(!isBST(root->left))
+//		{
+//			return 0;
+//		}
+//		if(prev!=NULL && root->data<=prev->data)
+//		{
+//			return 0;
+//		}
+//		prev=root;
+//		return isBST(root->right);
+//	}
+//	else 
+//	{
+//		return 1;
+//	}
+//	
+//}
+
 int isBST(struct node*root)
 {
 	static struct node*prev=NULL;
-	if(root!=NULL)
+	if(root==NULL)
+	{
+		return 1;   // An empty tree is always a BST.
+	}
+	else
 	{
 		if(!isBST(root->left))
 		{
 			return 0;
 		}
-		if(prev!=NULL && root->data<=prev->data)
+		if(prev!=NULL && prev->data>=root->data)
 		{
 			return 0;
 		}
 		prev=root;
 		return isBST(root->right);
 	}
-	else 
-	{
-		return 1;
-	}
-	
 }
+
+
+
+
+
+
+
 struct node*create(int data)
 {
 	struct node*new=(struct node*)malloc(sizeof(struct node));

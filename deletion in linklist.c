@@ -95,8 +95,6 @@ struct node*delet_at_between(struct node*head,int index)
 	}
 	struct node*temp=ptr->next;
 	ptr->next=temp->next;
-	
-	
 	free(temp);
 	return head;
 }
